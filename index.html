@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>France Plus Berre — Démos</title>
+<style>
+  :root { --bleu:#0a3d62; --sable:#f4ede1; --corail:#e8624a; --or:#d9a441; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body {
+    font-family:-apple-system,'Segoe UI',Roboto,sans-serif;
+    background:var(--sable); color:var(--bleu);
+    min-height:100vh; display:flex; flex-direction:column;
+    align-items:center; justify-content:center; padding:40px 20px;
+  }
+  h1 { font-size:clamp(1.8rem,5vw,2.6rem); margin-bottom:8px; text-align:center; }
+  .sub { color:#6b6256; margin-bottom:40px; text-align:center; max-width:520px; }
+  .cards { display:grid; gap:24px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+           width:100%; max-width:760px; }
+  .card {
+    background:#fff; border-radius:14px; padding:28px;
+    box-shadow:0 8px 30px rgba(10,61,98,.10); text-decoration:none;
+    color:inherit; transition:transform .15s ease, box-shadow .15s ease;
+    display:flex; flex-direction:column;
+  }
+  .card:hover { transform:translateY(-4px); box-shadow:0 14px 40px rgba(10,61,98,.18); }
+  .tag { font-size:.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+         padding:4px 10px; border-radius:20px; align-self:flex-start; margin-bottom:14px; }
+  .tag.std { background:#e7e7e7; color:#555; }
+  .tag.prem { background:var(--corail); color:#fff; }
+  .card h2 { font-size:1.3rem; margin-bottom:6px; }
+  .card p { color:#6b6256; font-size:.95rem; flex:1; margin-bottom:16px; }
+  .go { font-weight:600; color:var(--corail); }
+  footer { margin-top:48px; font-size:.85rem; color:#8a8170; text-align:center; }
+</style>
+</head>
+<body>
+  <h1>France Plus Berre</h1>
+  <p class="sub">Deux propositions de site vitrine. Cliquez pour découvrir chaque version.</p>
+
+  <div class="cards">
+    <a class="card" href="./standard/">
+      <span class="tag std">Offre Standard</span>
+      <h2>Version Essentielle</h2>
+      <p>Un site clair et fonctionnel qui présente l'essentiel : services, horaires et contact.</p>
+      <span class="go">Voir la démo →</span>
+    </a>
+
+    <a class="card" href="./premium/">
+      <span class="tag prem">Offre Premium</span>
+      <h2>Version Sur-mesure</h2>
+      <p>Identité visuelle dédiée, animations, carte interactive et formulaire soigné.</p>
+      <span class="go">Voir la démo →</span>
+    </a>
+  </div>
+
+  <footer>Démonstrations réalisées pour France Plus Berre</footer>
+</body>
+</html>
